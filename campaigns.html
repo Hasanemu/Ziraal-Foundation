@@ -353,7 +353,7 @@
             .cta-section p {
                 font-size: 1rem;
             }
-             /* Mobile Navigation Specifics */
+            /* Mobile Navigation Specifics */
             .mobile-nav-hidden { display: none; }
             .mobile-nav-visible {
                 display: flex;
@@ -716,21 +716,21 @@ Volunteers conducted daily sessions across five key areas: Maths, English, Histo
             const mobileNav = document.getElementById('mobile-nav');
             const header = document.querySelector('.custom-header');
 
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('mobile-nav-hidden');
-                mobileNav.classList.toggle('mobile-nav-visible');
-                header.classList.toggle('header-mobile-open');
-            });
+            // mobileMenuButton.addEventListener('click', () => {
+            //     mobileNav.classList.toggle('mobile-nav-hidden');
+            //     mobileNav.classList.toggle('mobile-nav-visible');
+            //     header.classList.toggle('header-mobile-open');
+            // });
 
-            mobileNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileNav.classList.contains('mobile-nav-visible')) {
-                        mobileNav.classList.remove('mobile-nav-visible');
-                        mobileNav.classList.add('mobile-nav-hidden');
-                        header.classList.remove('header-mobile-open');
-                    }
-                });
-            });
+            // mobileNav.querySelectorAll('a').forEach(link => {
+            //     link.addEventListener('click', () => {
+            //         if (mobileNav.classList.contains('mobile-nav-visible')) {
+            //             mobileNav.classList.remove('mobile-nav-visible');
+            //             mobileNav.classList.add('mobile-nav-hidden');
+            //             header.classList.remove('header-mobile-open');
+            //         }
+            //     });
+            // });
 
             console.log('Campaigns page loaded with all details on one page.');
         });
