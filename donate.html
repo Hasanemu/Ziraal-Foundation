@@ -59,6 +59,11 @@
             display: none; /* Hidden by default on small screens */
         }
 
+        /*
+            When the mobile dropdown functionality is disabled,
+            these classes are no longer toggled by JavaScript.
+            The mobile-nav will remain hidden.
+        */
         .mobile-nav-visible {
             display: flex; /* Flexbox for column layout when visible */
             flex-direction: column;
@@ -333,26 +338,27 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileNav = document.getElementById('mobile-nav');
-            const header = document.querySelector('.custom-header');
+            // The following lines related to mobile menu functionality are commented out
+            // to disable the dropdown for mobile.
+            // const mobileMenuButton = document.getElementById('mobile-menu-button');
+            // const mobileNav = document.getElementById('mobile-nav');
+            // const header = document.querySelector('.custom-header');
 
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('mobile-nav-hidden');
-                mobileNav.classList.toggle('mobile-nav-visible');
-                header.classList.toggle('header-mobile-open');
-            });
+            // mobileMenuButton.addEventListener('click', () => {
+            //     mobileNav.classList.toggle('mobile-nav-hidden');
+            //     mobileNav.classList.toggle('mobile-nav-visible');
+            //     header.classList.toggle('header-mobile-open');
+            // });
 
-            // Close mobile menu when a link is clicked (for better UX)
-            mobileNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileNav.classList.contains('mobile-nav-visible')) {
-                        mobileNav.classList.remove('mobile-nav-visible');
-                        mobileNav.classList.add('mobile-nav-hidden');
-                        header.classList.remove('header-mobile-open');
-                    }
-                });
-            });
+            // mobileNav.querySelectorAll('a').forEach(link => {
+            //     link.addEventListener('click', () => {
+            //         if (mobileNav.classList.contains('mobile-nav-visible')) {
+            //             mobileNav.classList.remove('mobile-nav-visible');
+            //             mobileNav.classList.add('mobile-nav-hidden');
+            //             header.classList.remove('header-mobile-open');
+            //         }
+            //     });
+            // });
         });
     </script>
 </body>
